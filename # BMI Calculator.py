@@ -24,13 +24,13 @@ def bmi_calculator():
             result.config(text="According to your BMI, you are underweight")
             
         elif 18.5 <= BMI <= 24.9 :
-            result.config(text="You are within normal weight parameters")
+            result.config(text="You are within normal weight parameters", bg="green")
         
         elif 25.0 <= BMI <= 29.9 :
-            result.config(text="You are overweight")
+            result.config(text="You are overweight", bg="orange")
             
         else: 
-            result.config(text="According to your BMI, you are obese")
+            result.config(text="According to your BMI, you are obese", bg="red")
   except:
       messagebox.showerror('Sorry the answer:', result,'is not valid, please try using numbers')
       
@@ -43,7 +43,7 @@ def bmi_calculator():
 root = kinter.Tk()
 root.title("The BMI Calculator")
 
-root.configure(bg='#428df5')
+root.configure(bg='#96928d')
 
 # The widget
 kinter.Label(root, text="Please fill in the following information").grid(row=0, column=0)
@@ -54,21 +54,21 @@ kinter.Label(root, text=" 25.0 - 29.9 = Overweight", bg="orange").grid(row=3, co
 
 
 
-kinter.Label(root, text="Weight (In Kg):", bg='#428df5', fg='white').grid(row=1, column=1)
+kinter.Label(root, text="Weight (In Kg):", bg='#96928d', fg='white').grid(row=1, column=1)
 weight_spinbox = kinter.Spinbox(root, from_=30.0, to=300.0, increment=1, width=10, bg="black")
 weight_spinbox.grid(row=1, column=2)
 
-kinter.Label(root, text="Height (In Metres):",  bg='#428df5', fg='white').grid(row=2, column=1)
+kinter.Label(root, text="Height (In Metres):",  bg='#96928d', fg='white').grid(row=2, column=1)
 height_spinbox = kinter.Spinbox(root, from_=1.0, to=2.5, increment=0.01, width=10, bg="black")
 height_spinbox.grid(row=2, column=2)
 
 submit = kinter.Button(root, text="Calculate", command=bmi_calculator, bg='red', fg='black')
 submit.grid(row=5, columnspan=5)
 
-BMI_label = kinter.Label(root, text="Your BMI is:" , bg='#428df5')
+BMI_label = kinter.Label(root, text="Your BMI is:" , bg='#96928d')
 BMI_label.grid(row=4, columnspan=3)
 
-result = kinter.Label(root, text="", bg='#428df5')
+result = kinter.Label(root, text="", bg='#96928d')
 result.grid(row=7, columnspan=3)
 
 root.mainloop()
