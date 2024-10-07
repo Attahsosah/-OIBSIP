@@ -6,11 +6,11 @@ from tkinter import messagebox
 # BMI Index : Below 18.5 = underweight , 18.5 - 24.9  = Healthy range, 25.0 - 29.9 = Overweight, >/=30.0  = Obese
 def bmi_calculator():
     
-    
-    
+      
   try:
+      
         underWeight = 18.5 
-        
+        # spinbox is simply a number toggler
         weight = float(weight_spinbox.get())
         
         height = float(height_spinbox.get())
@@ -34,8 +34,7 @@ def bmi_calculator():
   except:
       messagebox.showerror('Sorry the answer:', result,'is not valid, please try using numbers')
       
-      overweight_color = "#FF9800"
-      normalweight_color = "#4CAF50"
+     
       
         
 #   set_default_color_theme('blue')      
@@ -62,7 +61,7 @@ kinter.Label(root, text="Height (In Metres):",  bg='#96928d', fg='white').grid(r
 height_spinbox = kinter.Spinbox(root, from_=1.0, to=2.5, increment=0.01, width=10, bg="black")
 height_spinbox.grid(row=2, column=2)
 
-submit = kinter.Button(root, text="Calculate", command=bmi_calculator, bg='red', fg='black')
+submit = kinter.Button(root, text="Calculate", command=bmi_calculator, bg='red', bg='black')
 submit.grid(row=5, columnspan=5)
 
 BMI_label = kinter.Label(root, text="Your BMI is:" , bg='#96928d')
