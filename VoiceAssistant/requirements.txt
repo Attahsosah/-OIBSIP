@@ -1,0 +1,8 @@
+
+pyaudio
+gTTS
+pyautogui
+pydub
+speechrecognition
+python-dotenv
+openai
