@@ -22,7 +22,7 @@ def pas():
     password = ""
     
     # Here we have defined what will happen when a particular strength is selected . Either Low, Medium or High
-    
+    # DzMWfKlRfAVwzeVYz
     if var.get() == 1: 
         for i in range(0, leng):
             password = password + random.choice(lowercase)
